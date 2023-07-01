@@ -27,10 +27,14 @@ const RecipeBox = ({ recipe }) => {
           <BsTrash title="Delete" onClick={() => HandleDelete(id)} />
         </div>
         <div className="recipe-img">
-          <img
-            src={image}
-            alt="https://tse4.mm.bing.net/th?id=OIP.3WcsoyLEZoaZmIMBvppt5QHaFj&pid=Api&P=0&h=180"
-          />
+          {image && typeof image === "string" ? (
+            <img src={image} alt={name} />
+          ) : (
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.3WcsoyLEZoaZmIMBvppt5QHaFj&pid=Api&P=0&h=180"
+              alt={name}
+            />
+          )}
         </div>
         <h2 className="recipe-name">{name}</h2>
         <div className="recipe-detail">

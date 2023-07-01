@@ -7,7 +7,7 @@ const RecipeModal = () => {
   const { setRecipes, recipes, setIsOpen, isOpen, editRecipe, setEditRecipe } =
     useData();
   const [formData, setFormData] = useState(
-    editRecipe
+    editRecipe?.name
       ? editRecipe
       : {
           id: uuidv4(),
@@ -28,11 +28,9 @@ const RecipeModal = () => {
     }));
   };
 
-  console.log(formData.instruction);
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (editRecipe) {
+    if (editRecipe?.name) {
       const updatedRecipe = recipes.map((recipe) =>
         recipe.id === editRecipe.id ? { ...recipe, ...formData } : recipe
       );
@@ -53,7 +51,7 @@ const RecipeModal = () => {
   return (
     <div className="outer-body">
       <div className="modal-main">
-        <h1>{editRecipe ? "Edit Recipe" : "Create New Recipe"}</h1>
+        <h1>{editRecipe?.name ? "Edit Recipe" : "Create New Recipe"}</h1>
         <form onSubmit={handleSubmit}>
           <div className="recipe-inp">
             <input
@@ -102,7 +100,7 @@ const RecipeModal = () => {
           />
           <div className="btn-box">
             <button type="submit">
-              {editRecipe ? "Save Recipe" : " Add Recipe"}
+              {editRecipe?.name ? "Save Recipe" : " Add Recipe"}
             </button>
             <button
               type="button"
