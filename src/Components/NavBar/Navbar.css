@@ -1,0 +1,45 @@
+.navbar form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 0.5rem;
+    gap: 1rem;
+    margin: 1rem;
+    border-radius: 12px;
+    height: 3rem;
+}
+
+.navbar form>input {
+    outline: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    border-right: 1px solid;
+    width: 15%;
+    max-width: 200px;
+}
+
+.filter-radio-btn {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.radio-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.radio-box label {
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.radio-box input {
+    margin-top: 0.3rem;
+    cursor: pointer;
+
+}

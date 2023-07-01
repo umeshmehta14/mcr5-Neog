@@ -1,0 +1,21 @@
+.container {
+    padding: 1rem;
+}
+
+.recipe-box-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.new-recipe-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 348px;
+    color: gray;
+    font-size: 3rem;
+    cursor: pointer;
+}

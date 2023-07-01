@@ -1,0 +1,45 @@
+.single-page {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-recipe-box {
+    padding: 1rem;
+    display: flex;
+    box-shadow: 0px 0px 8px gray;
+    border-radius: 12px;
+    gap: 8rem;
+}
+
+.single-img img {
+    height: 100%;
+}
+
+
+.s-recipe-detail {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.s-ingredients {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.instr-main ol.instruction-list {
+    counter-reset: step-counter;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.instr-main ol.instruction-list li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter) ".";
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
